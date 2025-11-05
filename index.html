@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title></title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <link href="vendor/font-awesome/css/font-awesome.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/scrolling-nav.css" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+ 
+  <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico">
+
+  <style>
+    body {
+	      font-family: 'Montserrat', sans-serif;
+    }
+    h3 {
+      text-align:center;
+      font-size:100%;
+    	color: rgb(100,220,220);
+    	letter-spacing: .5em;
+    }
+    h4 {
+      margin: 0 auto;
+      margin-top: 60px;
+      background-color: black;
+      width: 40%;
+      min-width: 400px;
+      padding: 20px;
+    }
+    .nobul {
+      list-style-type: none;
+      margin-top: 20px;
+    } 
+    .glitch {
+    	color: white;
+    	font-size: 4em;
+    	letter-spacing: .3em;
+    }
+    @media screen and (max-width: 991px) {
+      .glitch {
+    	  font-size: 3em;
+      }
+    }
+    .header-bg {
+      padding: 256px 0 200px !important; 
+      margin-top: -60px;
+      background: linear-gradient(rgba(10,10,10,.4),rgba(0,0,0,.9)), repeating-linear-gradient(0, transparent, transparent 2px, black 3px, black 3px),
+          url('https://images.unsplash.com/photo-1602591151779-e45682f5c232?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=893&q=80');
+      background-position-x: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position-y: bottom;
+    }
+    .speaker {
+      padding-top: 40px;
+      padding-bottom: 40px;
+      border-bottom: 2px solid #999;
+    }
+    h1 {
+      text-shadow:1px 1px 0px #f0f, -1px -1px 0 #0ff;
+      font-size:100%;
+      text-align:center;
+      text-shadow:2px 3px 0px #f0f, -2px -2px 0 #0ff;
+      word-wrap: break-word;
+    }
+    h2 {
+      font-size: 2em !important;
+      font-weight: bold;
+    }
+    @media screen and (max-width: 991px) {
+      h2 {
+        font-size: 1.3em !important;
+      }
+    }
+    .btn-warning {
+      color: white !important;
+      border-color: #FF9800;
+      background-color: #FF9800;
+      box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+    }
+    .btn-register {
+      color: white !important;
+      background-color: #FF9800;
+      border-color: #FF9800;
+      width: 60%;
+      font-size: 1.2em;
+      padding: 15px;
+      margin: 0 auto;
+      border-radius: 50px;
+      box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+    }
+    .same-space {
+      height: 100px;
+    }
+    .navbar-dark .navbar-nav .nav-link {
+        color: rgba(255,255,255) !important;
+    }
+    .infobox {
+      border: 3px dashed black;
+      padding: 15px;
+    }
+    @media screen and (min-width: 992px) {
+      #mainNav {
+        background-color: transparent !important;
+      }
+    }
+    .btn-secondary {
+        background-color: transparent;
+        border-color: transparent;
+        outline: none;
+    }
+    .show>.btn-secondary.dropdown-toggle {
+        background-color: transparent;
+        border-color: transparent;
+        outline: none;
+    }
+    .btn-secondary:focus {
+        background-color: transparent;
+        border-color: transparent;
+        outline: none;
+    }
+    .btn-secondary:hover {
+        background-color: transparent;
+        border-color: transparent;
+        outline: none;
+    }
+    .mt-3 {
+        min-width: 100px;
+    }
+    .dropdown-menu {
+        background-color: #000;
+    }
+    .dropdown-item {
+        color: #ffffff;
+    } 
+    </style>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VT0DFRW564"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  
+    gtag('config', 'G-VT0DFRW564');
+  </script>
+
+</head>
+
+<body id="page-top">
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary static-top" id="mainNav">
+    <div class="container">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#invitedspeakers">Invited Speakers</a>
+          </li>
+          <li class="nav-item">
+            <div class="dropdown">
+              <button class="nav-link btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Digital Media SIG</button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="https://digitalmediasig.github.io">Special Interest Group</a>
+                <a class="dropdown-item" href="https://digitalmediasig.github.io/Mediate2020">Mediate 2020 (ICWSM)</a>
+                <a class="dropdown-item" href="https://digitalmediasig.github.io/Mediate2021">Mediate 2021 (ICWSM)</a>
+		<a class="dropdown-item" href="https://digitalmediasig.github.io/Mediate2022">Mediate 2022 (ICWSM)</a>
+		<a class="dropdown-item" href="https://digitalmediasig.github.io/Mediate2023">Mediate 2023 (ICWSM)</a>
+		<a class="dropdown-item" href="https://digitalmediasig.github.io/misinfoandgenAI/">GenAI - AI UK Fringe 2024</a>
+              </div>
+            </div>
+            </li>  
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header class="bg-primary text-white header-bg">
+    <div class="container text-center">
+      <h1 class="glitch">Seminar Series</h2>
+      <h2 class="glitch">2024-2025</h1>
+      <h4 class="sub">15.00 - 16.00 UK time</h4>
+    </div>
+  </header>
+
+  <section id="overview">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <h2>Overview</h2>
+          <p class="lead">Through this series of seminars we aim to initiate conversations between academics and practitioners around our themes of focus. Our seminars happen on <strong>Thursdays at the frequency of around once a month</strong>. If you are interested in receiving updates and links to the monthly talks please join our <a href="https://tinyurl.com/mediasigsignup">mailing list</a>.</p>
+          <p class="lead">We include talk from researchers at different career stages, as well as industry professionals. </p>
+	 <p class="lead">Our three themes of focus for 2024 are:
+		<ol>
+		  <li>Explainable and evidence-based misinformation detection</li>
+		  <li>Generative AI and misinformation</li>
+		  <li>Multimodal verification</li>
+		</ol>
+	  </p>
+	 <p class="lead">Technical research areas include:
+		<ol>
+		  <li>Natural Language Processing</li>
+		  <li>Deep Learning</li>
+		  <li>Social Network Dynamics</li>
+		  <li>Computer Vision</li>
+		  <li>Cognitive Psychology</li>
+		  <li>Mass Communication Studies</li>
+		</ol>
+	  </p>
+          <!--<div class="text-center"><a href="https://cmsc2020.com/page14013776.html" class="btn btn-register">Register</a></div>-->
+          <br>
+<!--           <p class="lead"><b>Zoom link:</b> <a href="https://us02web.zoom.us/j/7707603465?pwd=NHM1VGM5c2JBbWlTVGNCcTQzWWUyZz09">https://us02web.zoom.us/j/7707603465?pwd=NHM1VGM5c2JBbWlTVGNCcTQzWWUyZz09</a></p> -->
+        </div>
+      </div>
+    </div>
+  </section>
+	
+  <section id="invitedspeakers" class="bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <h2 class="mb-5">Invited Speakers</h2>
+
+   <div class="row speaker">
+            <div class="col-md-8">
+                <div class="pt-4">
+                  <h5 class="title same-space">
+                    <span class="d-block mb-1">Owen Cook</span>
+                    <small class="h6 text-muted">PhD Student, University of Sheffield</small>
+                  </h5>
+                  <h6>3rd of July 2025 @ 15.00- 16.00 BST</h6>
+                  <p class="h6 text-muted">Trust in the Annotation Process: Explicitly Modelling Reliability in Data Annotation and Model Training.</p>
+                </div>
+            </div>
+            <div class="col-md-4 text-center">
+                <img src="assets/owen.jpeg" class="img-center img-fluid shadow shadow-lg--hover img-center img-fluid shadow shadow-lg--hover rounded-circle" style="width: 200px;" alt="image">
+                <br/>
+                <div class="mt-3">
+                  <a href="https://www.linkedin.com/in/owen-cook-b0b7b515b/?originalSubdomain=uk" class="btn btn-warning btn-icon-only rounded-circle">
+                    <i class="fa fa-globe"></i>
+                  </a>
+                  <a href="https://scholar.google.com/citations?user=A78rPvIAAAAJ&hl=en" class="btn btn-warning btn-icon-only rounded-circle">
+                    <i class="fa fa-google"></i>
+                  </a>
+
+                </div>
+            </div>
+   </div> 
+		
+   <div class="row speaker">
+            <div class="col-md-4 text-center">
+                <img src="assets/alicja_martinek.JPG" class="img-center img-fluid shadow shadow-lg--hover img-center img-fluid shadow shadow-lg--hover rounded-circle" style="width: 200px;" alt="image">
+                <br/>
+                <div class="mt-3">
+                  <a href="https://www.linkedin.com/in/alicja-martinek/" class="btn btn-warning btn-icon-only rounded-circle">
+                    <i class="fa fa-globe"></i>
+                  </a>
+                  <a href="https://scholar.google.com/citations?user=hrlmugsAAAAJ&hl=pl" class="btn btn-warning btn-icon-only rounded-circle">
+                    <i class="fa fa-google"></i>
+                  </a>
+                </div>
+            </div> 
+            <div class="col-md-8">
+                <div class="pt-4">
+                  <h5 class="title same-space">
+                    <span class="d-block mb-1">Alicja Martinek</span>
+                    <small class="h6 text-muted">PhD Student, NASK - National Research Institute, Poland</small>
+                  </h5>
+                  <h6>5th of June 2025 @ 15.00- 16.00 BST</h6>
+                  <p class="h6 text-muted">Detecting deepfakes and false ads through analysis of text and social engineering techniques</p>
+                </div>
+            </div>
+    </div>		
+    <div class="row speaker">
+            <div class="col-md-8">
+                <div class="pt-4">
+                  <h5 class="title same-space">
+                    <span class="d-block mb-1">Federico Ruggeri</span>
+                    <small class="h6 text-muted">Research Fellow, Language Technologies Lab, DISI, University of Bologna</small>
+                  </h5>
+                  <h6>8th of May 2025 @ 15.00- 16.00 BST</h6>
+                  <p class="h6 text-muted">From data annotation to modelling, the importance of distilling and using textual knowledge in hate speech. [<a href="https://drive.google.com/file/d/1JY2-c1XoUd8fSRuGVlodHk0thELb2-VI/view?usp=sharing">recording</a> , <a href="https://drive.google.com/file/d/1trjG7VsJUmRRwkOIE0fWzf_M_n6tydm5/view?usp=drive_link">slides</a>]</p>
+                </div>
+            </div>
+            <div class="col-md-4 text-center">
+                <img src="assets/FR_photo.png" class="img-center img-fluid shadow shadow-lg--hover img-center img-fluid shadow shadow-lg--hover rounded-circle" style="width: 200px;" alt="image">
+                <br/>
+                <div class="mt-3">
+                  <a href="https://www.unibo.it/sitoweb/federico.ruggeri6/en" class="btn btn-warning btn-icon-only rounded-circle">
+                    <i class="fa fa-globe"></i>
+                  </a>
+                  <a href="https://scholar.google.com/citations?user=moOd0BwAAAAJ&hl=it" class="btn btn-warning btn-icon-only rounded-circle">
+                    <i class="fa fa-google"></i>
+                  </a>
+
+                </div>
+            </div>
+          </div> 
+		
+    <div class="row speaker">
+            <div class="col-md-4 text-center">
+                <img src="assets/daryna.png" class="img-center img-fluid shadow shadow-lg--hover img-center img-fluid shadow shadow-lg--hover rounded-circle" style="width: 200px;" alt="image">
+                <br/>
+                <div class="mt-3">
+                  <a href="https://dardem.github.io/" class="btn btn-warning btn-icon-only rounded-circle">
+                    <i class="fa fa-globe"></i>
+                  </a>
+                  <a href="https://scholar.google.com/citations?user=mLX6olgAAAAJ&hl=en" class="btn btn-warning btn-icon-only rounded-circle">
+                    <i class="fa fa-google"></i>
+                  </a>
+                </div>
+            </div> 
+            <div class="col-md-8">
+                <div class="pt-4">
+                  <h5 class="title same-space">
+                    <span class="d-block mb-1">Daryna Dementieva</span>
+                    <small class="h6 text-muted">Postdoctoral Researcher | Technical University of Munich</small>
+                  </h5>
+                  <h6>13th of March 2025 @ 15.00- 16.00 GMT</h6>
+                  <p class="h6 text-muted">Methods for Multilingual Harmful Speech Mitigation [<a href="https://drive.google.com/drive/folders/130mgjVrRPhapGjYlwK_PUF7SOEh2QhG4">recording</a>, <a href="https://drive.google.com/drive/folders/130mgjVrRPhapGjYlwK_PUF7SOEh2QhG4">slides</a>]</p>
+                </div>
+            </div>
+    </div>
+    <div class="row speaker">
+            <div class="col-md-8">
+                <div class="pt-4">
+                  <h5 class="title same-space">
+                    <span class="d-block mb-1">Eleonora Alabrese</span>
+                    <small class="h6 text-muted">Assistant Professor, University of Bath</small>
+                  </h5>
+                  <h6>6th of February 2025 @ 15.00- 16.00 GMT</h6>
+                  <p class="h6 text-muted">Politicized Scientists: Credibility Cost of Political Expression on Twitter [<a href="https://drive.google.com/file/d/1WpD67Nafw3NbqxgOOMKAGI2O-sC8ubIT/view">recording</a>, <a href="https://livewarwickac-my.sharepoint.com/:b:/g/personal/u2118765_live_warwick_ac_uk/EQqDs5dKQtFBjq0NDLR2E08Bv3KbQIXXUj7Sbqpj4NtQqg">slides</a>]</p>
+                </div>
+            </div>
+            <div class="col-md-4 text-center">
+                <img src="assets/eleonora.png" class="img-center img-fluid shadow shadow-lg--hover img-center img-fluid shadow shadow-lg--hover rounded-circle" style="width: 200px;" alt="image">
+                <br/>
+                <div class="mt-3">
+                  <a href="https://www.eleonora-alabrese.com/" class="btn btn-warning btn-icon-only rounded-circle">
+                    <i class="fa fa-globe"></i>
+                  </a>
+                  <a href="https://scholar.google.co.uk/citations?user=AaXSbNYAAAAJ&hl=en" class="btn btn-warning btn-icon-only rounded-circle">
+                    <i class="fa fa-google"></i>
+                  </a>
+
+                </div>
+            </div>
+          </div> 
+
+	<div class="row speaker">
+            <div class="col-md-4 text-center">
+                <img src="assets/coling2025.jpg" class="img-center img-fluid shadow shadow-lg--hover img-center img-fluid shadow shadow-lg--hover rounded-circle" style="width: 200px;" alt="image">
+                <br/>
+                <div class="mt-3">
+                  <a href="https://coling2025.org/" class="btn btn-warning btn-icon-only rounded-circle">
+                    <i class="fa fa-globe"></i>
+                  </a>
+                </div>
+            </div> 
+            <div class="col-md-8">
+                <div class="pt-4">
+                  <h5 class="title same-space">
+                    <span class="d-block mb-1">Professor Pinar Karagoz</span>
+                    <small class="h6 text-muted">Professor | Middle East Technical University</small>
+                    <span class="d-block mb-1">Dina Pisarevskaya</span>
+                    <small class="h6 text-muted">PhD Student | Queen Mary University of London</small>
+                  </h5>
+                  <h6>9th of January 2025 @ 15.00- 16.00 GMT</h6>
+                  <p class="h6 text-muted">COLING Media Reading Group <a href="https://drive.google.com/file/d/1V3051JsXwatDqtSSM6MJyMgT8LfSQzEs/view?usp=sharing">[recording]</a> </p>
+                </div>
+            </div>
+          </div>
+		
+       <div class="row speaker">
+            <div class="col-md-8">
+                <div class="pt-4">
+                  <h5 class="title same-space">
+                    <span class="d-block mb-1">Dr. Timo Spinde</span>
+                    <small class="h6 text-muted">Media Bias Group, University of Göttingen</small>
+                    <span class="d-block mb-1">Martin Wessel</span>
+                    <small class="h6 text-muted">CDTM, Technical University of Munich</small>
+                  </h5>
+                  <h6>5th of December 2024 @ 15.00- 16.00 GMT</h6>
+                  <p class="h6 text-muted">Automatically Detecting Media Bias: Interdisciplinary Insights and Advances [<a href="https://drive.google.com/file/d/1CPuOlNi7tGzWFN3w3H3-lhyFLsxWAVrr/view?usp=sharing">recording</a>,<a href="https://qmulprod-my.sharepoint.com/:p:/g/personal/acw623_qmul_ac_uk/EaRqQ-A8mjZNnhJK78B9O9QBfJdhpql2IluZYBnMGqozRA">slides</a>]</p>
+                </div>
+            </div>
+            <div class="col-md-4 text-center">
+                <img src="assets/timo_martin.png" class="img-center img-fluid shadow shadow-lg--hover img-center img-fluid shadow shadow-lg--hover rounded-circle" style="width: 200px;" alt="image">
+                <br/>
+                <div class="mt-3">
+                  <a href="https://www.linkedin.com/in/timo-spinde-229aa5169/" class="btn btn-warning btn-icon-only rounded-circle">
+                    <i class="fa fa-globe"></i>
+                  </a>
+                  <a href="https://www.linkedin.com/in/martinpwessel/" class="btn btn-warning btn-icon-only rounded-circle">
+                    <i class="fa fa-globe"></i>
+                  </a>
+
+                </div>
+            </div>
+          </div> 
+	 
+          <div class="row speaker">
+            <div class="col-md-4 text-center">
+                <img src="assets/malvina_jonathan.png" class="img-center img-fluid shadow shadow-lg--hover img-center img-fluid shadow shadow-lg--hover rounded-circle" style="width: 200px;" alt="image">
+                <br/>
+                <div class="mt-3">
+                  <a href="https://www.linkedin.com/in/mal-bozh/?originalSubdomain=bg" class="btn btn-warning btn-icon-only rounded-circle">
+                    <i class="fa fa-globe"></i>
+                  </a>
+                  <a href="https://www.linkedin.com/in/jonathnchang/" class="btn btn-warning btn-icon-only rounded-circle">
+                    <i class="fa fa-globe"></i>
+                  </a>
+                </div>
+            </div> 
+            <div class="col-md-8">
+                <div class="pt-4">
+                  <h5 class="title same-space">
+                    <span class="d-block mb-1">Malvina Bozhidarova</span>
+                    <small class="h6 text-muted">PhD Student | University of Nottingham</small>
+                    <span class="d-block mb-1">Jonathan Chang</span>
+                    <small class="h6 text-muted">PhD Student | Cornell University</small>
+                  </h5>
+                  <h6>31st of October 2024 @ 15.00- 16.00 GMT</h6>
+                  <p class="h6 text-muted">Hate speech and hate crimes: a data-driven study of evolving discourse around marginalized groups <a href="https://drive.google.com/file/d/1vk2ji7SjCCs9Qd_2N4_kQPISFG-4NkG8/view?usp=sharing">[recording]</a></p>
+                </div>
+            </div>
+          </div>
+
+          <div class="row speaker">
+            <div class="col-md-8">
+                <div class="pt-4">
+                  <h5 class="title same-space">
+                    <span class="d-block mb-1">Alexandre Bovet</span>
+                    <small class="h6 text-muted">Assistant Professor | University of Zurich</small>
+                  </h5>
+                  <h6>3rd of October 2024 @ 15.00- 16.00 BST</h6>
+                  <p class="h6 text-muted">Misinformation, Media Influencers and Fact-checking</p>
+                </div>
+            </div>
+            <div class="col-md-4 text-center">
+                <img src="assets/abovet.jpg" class="img-center img-fluid shadow shadow-lg--hover img-center img-fluid shadow shadow-lg--hover rounded-circle" style="width: 200px;" alt="image">
+                <br/>
+                <div class="mt-3">
+                  <a href="https://alexbovet.github.io/" class="btn btn-warning btn-icon-only rounded-circle">
+                    <i class="fa fa-globe"></i>
+                  </a>
+                  <a href="https://scholar.google.ch/citations?user=rbHfk1EAAAAJ&hl=fr" class="btn btn-warning btn-icon-only rounded-circle">
+                    <i class="fa fa-google"></i>
+                  </a>
+
+                </div>
+            </div> 
+          </div>
+        </div>
+      </div>
+   </section>
+
+   <section id="organizers">
+    <div class="container">
+      <div class="col-lg-8 mx-auto">
+        <h2 class="mb-5">Organizers</h2>
+        <div class="row">
+	  <div class="col-md-4 col-lg-4 mb-0">
+            <div class="px-4 text-center">
+              <img src="assets/talia.png" class="rounded-circle img-center img-fluid shadow shadow-lg--hover"
+                style="width: 200px;" alt="image">
+              <div class="pt-4 text-center">
+                <h5 class="title same-space">
+                  <span class="d-block mb-1">Talia <br /> Tseriotou</span>
+                  <small class="h6 text-muted">Queen Mary University</small>
+                </h5>
+                <div class="mt-5">
+                  <a href="http://twitter.com/taltser" class="btn btn-warning btn-icon-only rounded-circle">
+                    <i class="fa fa-twitter"></i>
+                  </a>
+                  <a href="mailto:t.tseriotou@qmul.ac.uk" class="btn btn-warning btn-icon-only rounded-circle">
+                    <i class="fa fa-envelope"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+	  <div class="col-md-4 col-lg-4 mb-0">
+            <div class="px-4 text-center">
+              <img src="assets/dina.jpeg" class="rounded-circle img-center img-fluid shadow shadow-lg--hover"
+                style="width: 200px;" alt="image">
+              <div class="pt-4 text-center" style="margin-bottom: 40px;">
+                <h5 class="title same-space">
+		  <span class="d-block mb-1">Dina <br /> Pisarevskaya</span>
+                  <small class="h6 text-muted">Queen Mary University</small>
+                </h5>
+                <div class="mt-5">
+		  <a href="https://twitter.com/deenochka1" class="btn btn-warning btn-icon-only rounded-circle">
+                    <i class="fa fa-twitter"></i>
+                  </a>
+                  <a href="mailto:d.pisarevskaya@qmul.ac.uk" class="btn btn-warning btn-icon-only rounded-circle">
+                    <i class="fa fa-envelope"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-lg-4 mb-0">
+            <div class="px-4 text-center">
+              <img src="assets/yueting.jpeg" class="rounded-circle img-center img-fluid shadow shadow-lg--hover"
+                style="width: 200px;" alt="image">
+              <div class="pt-4 text-center">
+                <h5 class="title same-space">
+                  <span class="d-block mb-1">Yueting <br /> Han</span>
+                  <small class="h6 text-muted">University of Warwick</small>
+                </h5>
+                <div class="mt-5">
+                  <a href="https://twitter.com/YuetingHan" class="btn btn-warning btn-icon-only rounded-circle">
+                    <i class="fa fa-twitter"></i>
+                  </a>
+                  <a href="mailto:yueting.han@warwick.ac.uk" class="btn btn-warning btn-icon-only rounded-circle">
+                    <i class="fa fa-envelope"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+	</div>
+	<div class="row">
+	  <div class="col-md-4 col-lg-4 mb-0">
+            <div class="px-4 text-center">
+              <img src="assets/michael.jpeg" class="rounded-circle img-center img-fluid shadow shadow-lg--hover"
+                style="width: 200px;" alt="image">
+              <div class="pt-4 text-center" style="margin-bottom: 40px;">
+                <h5 class="title same-space">
+                  <span class="d-block mb-1">Michael <br /> Schlichtkrull</span>
+                  <small class="h6 text-muted">Queen Mary University</small>
+                </h5>
+                <div class="mt-5">
+                  <a href="https://twitter.com/michael_sejr?lang=en" class="btn btn-warning btn-icon-only rounded-circle">
+                    <i class="fa fa-twitter"></i>
+                  </a>
+                  <a href="mailto:m.schlichtkrull@qmul.ac.uk" class="btn btn-warning btn-icon-only rounded-circle">
+                    <i class="fa fa-envelope"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-lg-4 mb-0">
+            <div class="px-4 text-center">
+              <img src="assets/marya.jpg" class="rounded-circle img-center img-fluid shadow shadow-lg--hover"
+                style="width: 200px;" alt="image">
+              <div class="pt-4 text-center">
+                <h5 class="title same-space">
+                  <span class="d-block mb-1">Marya <br /> Bazzi</span>
+                  <small class="h6 text-muted"> Alan Turing Institute, University of Warwick</small>
+                </h5>
+                <div class="mt-5">
+                  <a href="http://twitter.com/maryabazzi" class="btn btn-warning btn-icon-only rounded-circle">
+                    <i class="fa fa-twitter"></i>
+                  </a>
+                  <a href="mailto:mbazzi@turing.ac.uk" class="btn btn-warning btn-icon-only rounded-circle">
+                    <i class="fa fa-envelope"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>		
+        </div>
+        <div class="row">
+          <div class="col-md-4 col-lg-4 mb-0">
+            <div class="px-4 text-center">
+              <img src="assets/maria.jpg" class="rounded-circle img-center img-fluid shadow shadow-lg--hover"
+                style="width: 200px;" alt="image">
+              <div class="pt-4 text-center">
+                <h5 class="title same-space">
+                  <span class="d-block mb-1">Maria <br /> Liakata</span>
+                  <small class="h6 text-muted">Alan Turing Institute, Queen Mary University</small>
+                </h5>
+                <div class="mt-5">
+                  <a href="http://twitter.com/xrysoflhs" class="btn btn-warning btn-icon-only rounded-circle">
+                    <i class="fa fa-twitter"></i>
+                  </a>
+                  <a href="mailto:mliakata@turing.ac.uk" class="btn btn-warning btn-icon-only rounded-circle">
+                    <i class="fa fa-envelope"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-lg-4 mb-0">
+            <div class="px-4 text-center">
+              <img src="assets/arkaitz.png" class="rounded-circle img-center img-fluid shadow shadow-lg--hover"
+                style="width: 200px;" alt="image">
+              <div class="pt-4 text-center">
+                <h5 class="title same-space">
+                  <span class="d-block mb-1">Arkaitz <br /> Zubiaga</span>
+                  <small class="h6 text-muted">Queen Mary University</small>
+                </h5>
+                <div class="mt-5">
+                  <a href="http://twitter.com/arkaitz" class="btn btn-warning btn-icon-only rounded-circle">
+                    <i class="fa fa-twitter"></i>
+                  </a>
+                  <a href="mailto:a.zubiaga@qmul.ac.uk" class="btn btn-warning btn-icon-only rounded-circle">
+                    <i class="fa fa-envelope"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>	 
+       </div>	    
+      </div>
+    </div>
+  </section>
+  <!-- Footer -->
+  <footer class="py-5 bg-primary">
+    <div class="container">
+      <p class="m-0 text-center text-white">To find out about more events sign up to <a href="https://tinyurl.com/mediasigsignup">our mailing list</a> and follow us on <a href="https://twitter.com/DigitalMediaSIG">Twitter</a>!</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom JavaScript for this theme -->
+  <script src="js/scrolling-nav.js"></script>
+
+</body>
+
+</html>
